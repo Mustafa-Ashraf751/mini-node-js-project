@@ -20,11 +20,17 @@ const userSchema = mongoose.Schema({
         return emailRegex.test(email);
       },
     },
+    message: 'Please enter a valid email',
   },
   age: {
     type: Number,
     required: [true, 'You must enter your age'],
-    validate: [this.age >= 18, 'You are not adult:('],
+    validate: {
+      validator: function (age) {
+        return age >= 18;
+      },
+    },
+    message: 'You are not an adult yet!',
   },
   score: {
     type: Number,
