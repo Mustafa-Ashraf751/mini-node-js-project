@@ -1,5 +1,10 @@
 {
   "dependencies": {
-    "init": "^0.1.2"
+    "dotenv": "^16.4.5",
+    "express": "^4.21.0",
+    "init": "^0.1.2",
+    "mongodb": "^6.9.0",
+    "mongoose": "^8.6.2",
+    "morgan": "^1.10.0"
   }
 }
